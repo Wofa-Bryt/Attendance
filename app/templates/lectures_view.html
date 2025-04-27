@@ -1,0 +1,45 @@
+{% extends 'admin_base.html' %}
+
+{% block title %}Manage Lecturers{% endblock %}
+{% block head %}Manage Lecturers{% endblock %}
+
+{% block contents %}
+<div class="table-responsive">
+  <table class="table table-hover glass-table text-white">
+    <thead class="table-light text-dark">
+      <tr>
+        <th>Name</th>
+        <th>Course Code</th>
+        <th>Phone</th>
+        <th>Present</th>
+        <th>Times Present</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.course_code }}</td>
+        <td><i class="bi bi-telephone-fill"></i> {{ user.phone }}</td>
+        <td>
+          {% if user.attend == True %}
+            <span class="badge bg-success">Present</span>
+          {% else %}
+            <span class="badge bg-danger">Absent</span>
+          {% endif %}
+        </td>
+        <td>{{ user.times_present }}</td>
+        <td>
+          <form method="POST" action="{{ url_for('admin.delete_lecturer', id=user.id) }}">
+            <button type="submit" class="btn btn-danger btn-sm">
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

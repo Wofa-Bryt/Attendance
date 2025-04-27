@@ -1,0 +1,179 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.background-image {
+    background: url('/static/jonatan-pie-.jpg') no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.initials {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.initials {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+
+form input[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-glass {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: fadeInForm 1.5s ease forwards;
+}
+
+.form-glass .form-control,
+.form-glass .form-select {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.form-glass .form-control::placeholder {
+    color: #eee;
+}
+
+.form-glass .btn-primary {
+    background-color: #4e54c8;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-glass .btn-primary:hover {
+    background-color: #5f65d6;
+}
+
+.form-select {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff; 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.form-select option {
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff; 
+}
+
+.flash-messages {
+    animation: fadeInDown 0.5s ease both;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInForm {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@media (max-width: 768px) {
+    .glass-container {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .initials {
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
+
+
+
+
+
+

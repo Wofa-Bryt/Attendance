@@ -1,0 +1,23 @@
+{% extends 'admin_base.html' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+{% block head %}Dashboard{% endblock %}
+
+{% block contents %}
+<p class="text-center fs-4">Welcome to the Admin Dashboard!</p>
+
+<div class="row text-center mt-4">
+  <div class="col-md-6">
+    <div class="glass-card p-3">
+      <h5>Total Lecturers</h5>
+      <h2>{{ total_lecturers }}</h2>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="glass-card p-3">
+      <h5>Total Students</h5>
+      <h2>{{ total_students }}</h2>
+    </div>
+  </div>
+</div>
+{% endblock %}

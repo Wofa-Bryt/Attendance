@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block Title %}Student's Page{% endblock %}
+{% block content %}
+    <form method="POST" class="form-glass">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name(class='form-control', placeholder='Enter your name') }}
+        </div>
+        <div class="mb-3">
+            {{ form.phone(class='form-control', placeholder='Enter your phone number') }}
+        </div>
+        <div class="mb-3">
+            {{ form.faculty_class(class='form-control', placeholder='Enter your class') }}
+        </div>
+        <div class="mb-3">
+            {{ form.index_num(class='form-control', placeholder='Enter your Index Number') }}
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary w-100">
+    </form>
+{% endblock %}
