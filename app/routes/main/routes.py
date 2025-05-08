@@ -14,7 +14,7 @@ def home():
             return redirect(url_for('main.student_page'))
         elif selected_role == 'Lecturer':
             return redirect(url_for('main.teacher_page'))
-    return render_template('home.html', form=form)
+    return render_template('index.html', form=form)
 
 @main.route('/teacher', methods=['GET', 'POST'])
 def teacher_page():
